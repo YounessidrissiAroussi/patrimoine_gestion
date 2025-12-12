@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <menuitem id="menu_patrimoine_root" 
+              name="Patrimoine" 
+              sequence="10"/>
+
+
+    <menuitem id="menu_patrimoine_configuration" 
+              name="Configuration" 
+              parent="menu_patrimoine_root" 
+              sequence="100"/>
+
+
+    <menuitem id="menu_patrimoine_gestion" 
+              name="Gestion" 
+              parent="menu_patrimoine_root" 
+              sequence="10"/>
+
+
+    <menuitem id="menu_patrimoine_personnel" 
+              name="Personnel" 
+              parent="menu_patrimoine_gestion" 
+              sequence="10"/>
+
+
+    <menuitem id="menu_patrimoine_patrimoine" 
+              name="Patrimoine" 
+              parent="menu_patrimoine_gestion" 
+              sequence="20"/>
+
+
+    <record id="action_personnel" model="ir.actions.act_window">
+        <field name="name">Personnel</field>
+        <field name="res_model">patrimoine.personnel</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_categorie_personnel" model="ir.actions.act_window">
+        <field name="name">Catégories Personnel</field>
+        <field name="res_model">patrimoine.categorie.personnel</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="action_patrimoine_geo" model="ir.actions.act_window">
+        <field name="name">Patrimoine Géographique</field>
+        <field name="res_model">patrimoine.patrimoine.geographique</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_type_patrimoine" model="ir.actions.act_window">
+        <field name="name">Types Patrimoine</field>
+        <field name="res_model">patrimoine.type.patrimoine</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="action_patrimoine_actif" model="ir.actions.act_window">
+        <field name="name">Patrimoine Actif</field>
+        <field name="res_model">patrimoine.patrimoine.actif</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_categorie_patrim_actif" model="ir.actions.act_window">
+        <field name="name">Catégories Patrimoine Actif</field>
+        <field name="res_model">patrimoine.categorie.patrim.actif</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="action_unite" model="ir.actions.act_window">
+        <field name="name">Unités</field>
+        <field name="res_model">patrimoine.unite</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_type_unite" model="ir.actions.act_window">
+        <field name="name">Types Unité</field>
+        <field name="res_model">patrimoine.type.unite</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="action_famille" model="ir.actions.act_window">
+        <field name="name">Familles</field>
+        <field name="res_model">patrimoine.famille</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_sous_famille" model="ir.actions.act_window">
+        <field name="name">Sous-Familles</field>
+        <field name="res_model">patrimoine.sous.famille</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="action_marque" model="ir.actions.act_window">
+        <field name="name">Marques</field>
+        <field name="res_model">patrimoine.marque</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="action_fournisseur" model="ir.actions.act_window">
+        <field name="name">Fournisseurs</field>
+        <field name="res_model">patrimoine.fournisseur</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="action_etat" model="ir.actions.act_window">
+        <field name="name">États</field>
+        <field name="res_model">patrimoine.etat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_etat_patri_actif" model="ir.actions.act_window">
+        <field name="name">Historique États Patrimoine</field>
+        <field name="res_model">patrimoine.etat.patri.actif</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_personnel" 
+              name="Personnel" 
+              parent="menu_patrimoine_personnel" 
+              action="action_personnel" 
+              sequence="10"/>
+
+    <menuitem id="menu_categorie_personnel" 
+              name="Catégories Personnel" 
+              parent="menu_patrimoine_configuration" 
+              action="action_categorie_personnel" 
+              sequence="10"/>
+
+    <menuitem id="menu_patrimoine_geo" 
+              name="Patrimoine Géographique" 
+              parent="menu_patrimoine_patrimoine" 
+              action="action_patrimoine_geo" 
+              sequence="10"/>
+
+    <menuitem id="menu_type_patrimoine" 
+              name="Types Patrimoine" 
+              parent="menu_patrimoine_configuration" 
+              action="action_type_patrimoine" 
+              sequence="20"/>
+
+
+    <menuitem id="menu_patrimoine_actif" 
+              name="Patrimoine Actif" 
+              parent="menu_patrimoine_patrimoine" 
+              action="action_patrimoine_actif" 
+              sequence="20"/>
+
+    <menuitem id="menu_categorie_patrim_actif" 
+              name="Catégories Patrimoine Actif" 
+              parent="menu_patrimoine_configuration" 
+              action="action_categorie_patrim_actif" 
+              sequence="30"/>
+
+
+    <menuitem id="menu_unite" 
+              name="Unités" 
+              parent="menu_patrimoine_configuration" 
+              action="action_unite" 
+              sequence="40"/>
+
+    <menuitem id="menu_type_unite" 
+              name="Types Unité" 
+              parent="menu_patrimoine_configuration" 
+              action="action_type_unite" 
+              sequence="50"/>
+
+
+    <menuitem id="menu_famille" 
+              name="Familles" 
+              parent="menu_patrimoine_configuration" 
+              action="action_famille" 
+              sequence="60"/>
+
+    <menuitem id="menu_sous_famille" 
+              name="Sous-Familles" 
+              parent="menu_patrimoine_configuration" 
+              action="action_sous_famille" 
+              sequence="70"/>
+
+
+    <menuitem id="menu_marque" 
+              name="Marques" 
+              parent="menu_patrimoine_configuration" 
+              action="action_marque" 
+              sequence="80"/>
+
+
+    <menuitem id="menu_fournisseur" 
+              name="Fournisseurs" 
+              parent="menu_patrimoine_configuration" 
+              action="action_fournisseur" 
+              sequence="90"/>
+
+    <menuitem id="menu_etat" 
+              name="États" 
+              parent="menu_patrimoine_configuration" 
+              action="action_etat" 
+              sequence="100"/>
+
+    <menuitem id="menu_etat_patri_actif" 
+              name="Historique États" 
+              parent="menu_patrimoine_patrimoine" 
+              action="action_etat_patri_actif" 
+              sequence="30"/>
+
+</odoo>

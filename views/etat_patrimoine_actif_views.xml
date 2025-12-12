@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_etat_patri_actif_tree" model="ir.ui.view">
+        <field name="name">patrimoine.etat.patri.actif.tree</field>
+        <field name="model">patrimoine.etat.patri.actif</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="date_etat"/>
+                <field name="etat_id"/>
+                <field name="patrimoine_actif_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_etat_patri_actif_form" model="ir.ui.view">
+        <field name="name">patrimoine.etat.patri.actif.form</field>
+        <field name="model">patrimoine.etat.patri.actif</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="date_etat"/>
+                        <field name="etat_id"/>
+                        <field name="patrimoine_actif_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_personnel_tree" model="ir.ui.view">
+        <field name="name">patrimoine.personnel.tree</field>
+        <field name="model">patrimoine.personnel</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="matricule"/>
+                <field name="nom"/>
+                <field name="prenom"/>
+                <field name="fonction"/>
+                <field name="email"/>
+                <field name="categorie_personnel_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_personnel_form" model="ir.ui.view">
+        <field name="name">patrimoine.personnel.form</field>
+        <field name="model">patrimoine.personnel</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="matricule"/>
+                            <field name="nom"/>
+                            <field name="prenom"/>
+                            <field name="fonction"/>
+                            <field name="categorie_personnel_id"/>
+                        </group>
+                        <group>
+                            <field name="tel"/>
+                            <field name="fax"/>
+                            <field name="email"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

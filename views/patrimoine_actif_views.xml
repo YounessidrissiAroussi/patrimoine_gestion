@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_patrimoine_actif_tree" model="ir.ui.view">
+        <field name="name">patrimoine.patrimoine.actif.tree</field>
+        <field name="model">patrimoine.patrimoine.actif</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="designation"/>
+                <field name="famille_id"/>
+                <field name="marque_id"/>
+                <field name="date_acquisition"/>
+                <field name="etat_actualite"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_patrimoine_actif_form" model="ir.ui.view">
+        <field name="name">patrimoine.patrimoine.actif.form</field>
+        <field name="model">patrimoine.patrimoine.actif</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <field name="image_actif" widget="image" class="oe_avatar"/>
+                    </div>
+                    <group>
+                        <group string="Informations Générales">
+                            <field name="code"/>
+                            <field name="designation"/>
+                            <field name="patrimoine_geo_id"/>
+                            <field name="unite_id"/>
+                            <field name="categorie_patrim_actif_id"/>
+                        </group>
+                        <group string="Classification">
+                            <field name="famille_id"/>
+                            <field name="marque_id"/>
+                            <field name="fournisseur_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Acquisition">
+                            <field name="valeur_acquisition"/>
+                            <field name="date_acquisition"/>
+                            <field name="date_mise_service"/>
+                            <field name="n_bpc"/>
+                            <field name="n_bl"/>
+                            <field name="n_facture"/>
+                        </group>
+                        <group string="État">
+                            <field name="etat_actualite"/>
+                            <field name="degre_importance"/>
+                            <field name="consigne_securite"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Historique des États">
+                            <field name="etat_patri_actif_ids">
+                                <tree editable="bottom">
+                                    <field name="date_etat"/>
+                                    <field name="etat_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

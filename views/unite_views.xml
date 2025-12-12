@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_unite_tree" model="ir.ui.view">
+        <field name="name">patrimoine.unite.tree</field>
+        <field name="model">patrimoine.unite</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="designation"/>
+                <field name="type_unite_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_unite_form" model="ir.ui.view">
+        <field name="name">patrimoine.unite.form</field>
+        <field name="model">patrimoine.unite</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="designation"/>
+                        <field name="type_unite_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

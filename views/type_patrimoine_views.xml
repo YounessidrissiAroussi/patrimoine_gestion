@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_type_patrimoine_tree" model="ir.ui.view">
+        <field name="name">patrimoine.type.patrimoine.tree</field>
+        <field name="model">patrimoine.type.patrimoine</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="libelle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_type_patrimoine_form" model="ir.ui.view">
+        <field name="name">patrimoine.type.patrimoine.form</field>
+        <field name="model">patrimoine.type.patrimoine</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="libelle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

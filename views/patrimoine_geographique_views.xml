@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_patrimoine_geo_tree" model="ir.ui.view">
+        <field name="name">patrimoine.patrimoine.geographique.tree</field>
+        <field name="model">patrimoine.patrimoine.geographique</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="designation"/>
+                <field name="type_patrimoine_id"/>
+                <field name="unite_id"/>
+                <field name="responsable_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_patrimoine_geo_form" model="ir.ui.view">
+        <field name="name">patrimoine.patrimoine.geographique.form</field>
+        <field name="model">patrimoine.patrimoine.geographique</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="designation"/>
+                            <field name="croquis"/>
+                        </group>
+                        <group>
+                            <field name="type_patrimoine_id"/>
+                            <field name="unite_id"/>
+                            <field name="responsable_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Fiches">
+                            <group>
+                                <field name="fiche_immeuble" filename="fiche_immeuble.pdf"/>
+                                <field name="fiche_etage" filename="fiche_etage.pdf"/>
+                                <field name="fiche_local" filename="fiche_local.pdf"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
