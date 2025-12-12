@@ -1,15 +1,3 @@
-from .TypeUnite import TypeUnite
-from .Unite import Unite
-from .TypePatrimoine import TypePatrimoine
-from .CategoriePersonnel import CategoriePersonnel
-from .Personnel import Personnel
-from .Etat import Etat
-from .EtatPatrimoineActif import EtatPatrimoineActif
-from .Famille import Famille
-from .SousFamille import SousFamille
-from .Marque import Marque
-from .CategoriePatrimoineActif import CategoriePatrimoineActif
-from .Fournisseur import Fournisseur
-from .PatrimoineGeographique import PatrimoineGeographique
-from .PatrimoineActif import PatrimoineActif
-from .GestionPatrimoine import GestionPatrimoine
+# -*- coding: utf-8 -*-
+
+from . import models

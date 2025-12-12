@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- TYPE UNITE VIEWS -->
+    <record id="view_type_unite_tree" model="ir.ui.view">
+        <field name="name">patrimoine.type.unite.tree</field>
+        <field name="model">patrimoine.type.unite</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="libelle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_type_unite_form" model="ir.ui.view">
+        <field name="name">patrimoine.type.unite.form</field>
+        <field name="model">patrimoine.type.unite</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="libelle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- UNITE VIEWS -->
+    <record id="view_unite_tree" model="ir.ui.view">
+        <field name="name">patrimoine.unite.tree</field>
+        <field name="model">patrimoine.unite</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="designation"/>
+                <field name="type_unite_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_unite_form" model="ir.ui.view">
+        <field name="name">patrimoine.unite.form</field>
+        <field name="model">patrimoine.unite</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="designation"/>
+                        <field name="type_unite_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- TYPE PATRIMOINE VIEWS -->
+    <record id="view_type_patrimoine_tree" model="ir.ui.view">
+        <field name="name">patrimoine.type.patrimoine.tree</field>
+        <field name="model">patrimoine.type.patrimoine</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="libelle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_type_patrimoine_form" model="ir.ui.view">
+        <field name="name">patrimoine.type.patrimoine.form</field>
+        <field name="model">patrimoine.type.patrimoine</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="libelle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- CATEGORIE PERSONNEL VIEWS -->
+    <record id="view_categorie_personnel_tree" model="ir.ui.view">
+        <field name="name">patrimoine.categorie.personnel.tree</field>
+        <field name="model">patrimoine.categorie.personnel</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="libelle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_categorie_personnel_form" model="ir.ui.view">
+        <field name="name">patrimoine.categorie.personnel.form</field>
+        <field name="model">patrimoine.categorie.personnel</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="libelle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- PERSONNEL VIEWS -->
+    <record id="view_personnel_tree" model="ir.ui.view">
+        <field name="name">patrimoine.personnel.tree</field>
+        <field name="model">patrimoine.personnel</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="matricule"/>
+                <field name="nom"/>
+                <field name="prenom"/>
+                <field name="fonction"/>
+                <field name="email"/>
+                <field name="categorie_personnel_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_personnel_form" model="ir.ui.view">
+        <field name="name">patrimoine.personnel.form</field>
+        <field name="model">patrimoine.personnel</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="matricule"/>
+                            <field name="nom"/>
+                            <field name="prenom"/>
+                            <field name="fonction"/>
+                            <field name="categorie_personnel_id"/>
+                        </group>
+                        <group>
+                            <field name="tel"/>
+                            <field name="fax"/>
+                            <field name="email"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ETAT VIEWS -->
+    <record id="view_etat_tree" model="ir.ui.view">
+        <field name="name">patrimoine.etat.tree</field>
+        <field name="model">patrimoine.etat</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="libelle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_etat_form" model="ir.ui.view">
+        <field name="name">patrimoine.etat.form</field>
+        <field name="model">patrimoine.etat</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="libelle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- FAMILLE VIEWS -->
+    <record id="view_famille_tree" model="ir.ui.view">
+        <field name="name">patrimoine.famille.tree</field>
+        <field name="model">patrimoine.famille</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="libelle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_famille_form" model="ir.ui.view">
+        <field name="name">patrimoine.famille.form</field>
+        <field name="model">patrimoine.famille</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="libelle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- SOUS FAMILLE VIEWS -->
+    <record id="view_sous_famille_tree" model="ir.ui.view">
+        <field name="name">patrimoine.sous.famille.tree</field>
+        <field name="model">patrimoine.sous.famille</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="libelle"/>
+                <field name="famille_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_sous_famille_form" model="ir.ui.view">
+        <field name="name">patrimoine.sous.famille.form</field>
+        <field name="model">patrimoine.sous.famille</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="libelle"/>
+                        <field name="famille_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- MARQUE VIEWS -->
+    <record id="view_marque_tree" model="ir.ui.view">
+        <field name="name">patrimoine.marque.tree</field>
+        <field name="model">patrimoine.marque</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="libelle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_marque_form" model="ir.ui.view">
+        <field name="name">patrimoine.marque.form</field>
+        <field name="model">patrimoine.marque</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="libelle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- CATEGORIE PATRIMOINE ACTIF VIEWS -->
+    <record id="view_categorie_patrim_actif_tree" model="ir.ui.view">
+        <field name="name">patrimoine.categorie.patrim.actif.tree</field>
+        <field name="model">patrimoine.categorie.patrim.actif</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="libelle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_categorie_patrim_actif_form" model="ir.ui.view">
+        <field name="name">patrimoine.categorie.patrim.actif.form</field>
+        <field name="model">patrimoine.categorie.patrim.actif</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="libelle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- FOURNISSEUR VIEWS -->
+    <record id="view_fournisseur_tree" model="ir.ui.view">
+        <field name="name">patrimoine.fournisseur.tree</field>
+        <field name="model">patrimoine.fournisseur</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="denomination"/>
+                <field name="tel"/>
+                <field name="email"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_fournisseur_form" model="ir.ui.view">
+        <field name="name">patrimoine.fournisseur.form</field>
+        <field name="model">patrimoine.fournisseur</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="denomination"/>
+                            <field name="adresse"/>
+                        </group>
+                        <group>
+                            <field name="tel"/>
+                            <field name="fax"/>
+                            <field name="email"/>
+                        </group>
+                    </group>
+                    <group string="Responsable">
+                        <group>
+                            <field name="nom_resp"/>
+                            <field name="prenom_resp"/>
+                        </group>
+                        <group>
+                            <field name="gsm1"/>
+                            <field name="gsm2"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- PATRIMOINE GEOGRAPHIQUE VIEWS -->
+    <record id="view_patrimoine_geo_tree" model="ir.ui.view">
+        <field name="name">patrimoine.patrimoine.geographique.tree</field>
+        <field name="model">patrimoine.patrimoine.geographique</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="designation"/>
+                <field name="type_patrimoine_id"/>
+                <field name="unite_id"/>
+                <field name="responsable_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_patrimoine_geo_form" model="ir.ui.view">
+        <field name="name">patrimoine.patrimoine.geographique.form</field>
+        <field name="model">patrimoine.patrimoine.geographique</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="designation"/>
+                            <field name="croquis"/>
+                        </group>
+                        <group>
+                            <field name="type_patrimoine_id"/>
+                            <field name="unite_id"/>
+                            <field name="responsable_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Fiches">
+                            <group>
+                                <field name="fiche_immeuble" filename="fiche_immeuble.pdf"/>
+                                <field name="fiche_etage" filename="fiche_etage.pdf"/>
+                                <field name="fiche_local" filename="fiche_local.pdf"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- PATRIMOINE ACTIF VIEWS -->
+    <record id="view_patrimoine_actif_tree" model="ir.ui.view">
+        <field name="name">patrimoine.patrimoine.actif.tree</field>
+        <field name="model">patrimoine.patrimoine.actif</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="designation"/>
+                <field name="famille_id"/>
+                <field name="marque_id"/>
+                <field name="date_acquisition"/>
+                <field name="etat_actualite"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_patrimoine_actif_form" model="ir.ui.view">
+        <field name="name">patrimoine.patrimoine.actif.form</field>
+        <field name="model">patrimoine.patrimoine.actif</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <field name="image_actif" widget="image" class="oe_avatar"/>
+                    </div>
+                    <group>
+                        <group string="Informations Générales">
+                            <field name="code"/>
+                            <field name="designation"/>
+                            <field name="patrimoine_geo_id"/>
+                            <field name="unite_id"/>
+                            <field name="categorie_patrim_actif_id"/>
+                        </group>
+                        <group string="Classification">
+                            <field name="famille_id"/>
+                            <field name="marque_id"/>
+                            <field name="fournisseur_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Acquisition">
+                            <field name="valeur_acquisition"/>
+                            <field name="date_acquisition"/>
+                            <field name="date_mise_service"/>
+                            <field name="n_bpc"/>
+                            <field name="n_bl"/>
+                            <field name="n_facture"/>
+                        </group>
+                        <group string="État">
+                            <field name="etat_actualite"/>
+                            <field name="degre_importance"/>
+                            <field name="consigne_securite"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Historique des États">
+                            <field name="etat_patri_actif_ids">
+                                <tree editable="bottom">
+                                    <field name="date_etat"/>
+                                    <field name="etat_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ETAT PATRIMOINE ACTIF VIEWS -->
+    <record id="view_etat_patri_actif_tree" model="ir.ui.view">
+        <field name="name">patrimoine.etat.patri.actif.tree</field>
+        <field name="model">patrimoine.etat.patri.actif</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="date_etat"/>
+                <field name="etat_id"/>
+                <field name="patrimoine_actif_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_etat_patri_actif_form" model="ir.ui.view">
+        <field name="name">patrimoine.etat.patri.actif.form</field>
+        <field name="model">patrimoine.etat.patri.actif</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="date_etat"/>
+                        <field name="etat_id"/>
+                        <field name="patrimoine_actif_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

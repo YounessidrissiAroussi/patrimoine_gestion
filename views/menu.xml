@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-
+    <!-- ROOT MENU -->
     <menuitem id="menu_patrimoine_root" 
               name="Patrimoine" 
               sequence="10"/>
 
-
+    <!-- CONFIGURATION MENU -->
     <menuitem id="menu_patrimoine_configuration" 
               name="Configuration" 
               parent="menu_patrimoine_root" 
               sequence="100"/>
 
-
+    <!-- GESTION MENU -->
     <menuitem id="menu_patrimoine_gestion" 
               name="Gestion" 
               parent="menu_patrimoine_root" 
               sequence="10"/>
 
-
+    <!-- PERSONNEL SUBMENU -->
     <menuitem id="menu_patrimoine_personnel" 
               name="Personnel" 
               parent="menu_patrimoine_gestion" 
               sequence="10"/>
 
-
+    <!-- PATRIMOINE SUBMENU -->
     <menuitem id="menu_patrimoine_patrimoine" 
               name="Patrimoine" 
               parent="menu_patrimoine_gestion" 
               sequence="20"/>
 
+    <!-- ============= ACTIONS ============= -->
 
+    <!-- Personnel Actions -->
     <record id="action_personnel" model="ir.actions.act_window">
         <field name="name">Personnel</field>
         <field name="res_model">patrimoine.personnel</field>
@@ -43,7 +45,7 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-
+    <!-- Patrimoine Géographique Actions -->
     <record id="action_patrimoine_geo" model="ir.actions.act_window">
         <field name="name">Patrimoine Géographique</field>
         <field name="res_model">patrimoine.patrimoine.geographique</field>
@@ -56,7 +58,7 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-
+    <!-- Patrimoine Actif Actions -->
     <record id="action_patrimoine_actif" model="ir.actions.act_window">
         <field name="name">Patrimoine Actif</field>
         <field name="res_model">patrimoine.patrimoine.actif</field>
@@ -69,7 +71,7 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-
+    <!-- Unite Actions -->
     <record id="action_unite" model="ir.actions.act_window">
         <field name="name">Unités</field>
         <field name="res_model">patrimoine.unite</field>
@@ -82,7 +84,7 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-
+    <!-- Famille Actions -->
     <record id="action_famille" model="ir.actions.act_window">
         <field name="name">Familles</field>
         <field name="res_model">patrimoine.famille</field>
@@ -95,21 +97,21 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-
+    <!-- Marque Actions -->
     <record id="action_marque" model="ir.actions.act_window">
         <field name="name">Marques</field>
         <field name="res_model">patrimoine.marque</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-
+    <!-- Fournisseur Actions -->
     <record id="action_fournisseur" model="ir.actions.act_window">
         <field name="name">Fournisseurs</field>
         <field name="res_model">patrimoine.fournisseur</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-
+    <!-- Etat Actions -->
     <record id="action_etat" model="ir.actions.act_window">
         <field name="name">États</field>
         <field name="res_model">patrimoine.etat</field>
@@ -122,6 +124,9 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <!-- ============= MENU ITEMS ============= -->
+
+    <!-- Personnel Menu Items -->
     <menuitem id="menu_personnel" 
               name="Personnel" 
               parent="menu_patrimoine_personnel" 
@@ -134,6 +139,7 @@
               action="action_categorie_personnel" 
               sequence="10"/>
 
+    <!-- Patrimoine Géographique Menu Items -->
     <menuitem id="menu_patrimoine_geo" 
               name="Patrimoine Géographique" 
               parent="menu_patrimoine_patrimoine" 
@@ -146,7 +152,7 @@
               action="action_type_patrimoine" 
               sequence="20"/>
 
-
+    <!-- Patrimoine Actif Menu Items -->
     <menuitem id="menu_patrimoine_actif" 
               name="Patrimoine Actif" 
               parent="menu_patrimoine_patrimoine" 
@@ -159,7 +165,7 @@
               action="action_categorie_patrim_actif" 
               sequence="30"/>
 
-
+    <!-- Unite Menu Items -->
     <menuitem id="menu_unite" 
               name="Unités" 
               parent="menu_patrimoine_configuration" 
@@ -172,7 +178,7 @@
               action="action_type_unite" 
               sequence="50"/>
 
-
+    <!-- Famille Menu Items -->
     <menuitem id="menu_famille" 
               name="Familles" 
               parent="menu_patrimoine_configuration" 
@@ -185,20 +191,21 @@
               action="action_sous_famille" 
               sequence="70"/>
 
-
+    <!-- Marque Menu Items -->
     <menuitem id="menu_marque" 
               name="Marques" 
               parent="menu_patrimoine_configuration" 
               action="action_marque" 
               sequence="80"/>
 
-
+    <!-- Fournisseur Menu Items -->
     <menuitem id="menu_fournisseur" 
               name="Fournisseurs" 
               parent="menu_patrimoine_configuration" 
               action="action_fournisseur" 
               sequence="90"/>
 
+    <!-- Etat Menu Items -->
     <menuitem id="menu_etat" 
               name="États" 
               parent="menu_patrimoine_configuration" 

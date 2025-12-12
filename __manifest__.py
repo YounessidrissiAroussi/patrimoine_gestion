@@ -1,29 +1,35 @@
+# -*- coding: utf-8 -*-
 {
     'name': 'Gestion du Patrimoine',
-    'version': '17.0',
+    'version': '1.0',
     'category': 'Asset Management',
     'summary': 'Module de gestion du patrimoine géographique et actif',
-    'description': 'Module de Gestion du Patrimoine',
-    'author': 'IDIRISSI AROUSSI YOUNESS',
-    'website': '',
+    'description': """
+        Module de Gestion du Patrimoine
+        =================================
+        
+        Ce module permet de gérer:
+        * Le patrimoine géographique (immeubles, étages, locaux)
+        * Le patrimoine actif (équipements, matériels)
+        * Les personnels et leurs catégories
+        * Les fournisseurs
+        * Les états et l'historique des patrimoines
+        * Les familles et sous-familles de patrimoine
+        * Les marques et les unités
+        
+        Auteur: BJ
+        Version: 1.0
+    """,
+    'author': 'BJ',
+    'website': 'https://www.yourcompany.com',
     'depends': ['base'],
     'data': [
-        'views/type_unite_views.xml',
-        'views/unite_views.xml',
-        'views/type_patrimoine_views.xml',
-        'views/categorie_personnel_views.xml',
-        'views/personnel_views.xml',
-        'views/etat_views.xml',
-        'views/famille_views.xml',
-        'views/sous_famille_views.xml',
-        'views/marque_views.xml',
-        'views/categorie_patrimoine_actif_views.xml',
-        'views/fournisseur_views.xml',
-        'views/patrimoine_geographique_views.xml',
-        'views/patrimoine_actif_views.xml',
-        'views/etat_patrimoine_actif_views.xml',
+        'security/ir.model.access.csv',
+        'views/views.xml',
         'views/menu.xml',
     ],
     'installable': True,
     'application': True,
+    'auto_install': False,
+    'license': 'LGPL-3',
 }
